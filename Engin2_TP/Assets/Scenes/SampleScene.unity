@@ -1144,6 +1144,10 @@ PrefabInstance:
       propertyPath: rect.y
       value: 67
       objectReference: {fileID: 0}
+    - target: {fileID: 5258321180982019400, guid: c8aa60fecc0d0c347af67549404eb1f1, type: 3}
+      propertyPath: rect.x
+      value: 719
+      objectReference: {fileID: 0}
     - target: {fileID: 5388929549353127754, guid: c8aa60fecc0d0c347af67549404eb1f1, type: 3}
       propertyPath: rect.x
       value: 801
