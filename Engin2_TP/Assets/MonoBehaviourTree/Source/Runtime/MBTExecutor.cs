@@ -16,7 +16,7 @@ namespace MBT
             OnValidate();
         }
 
-        void FixedUpdate()
+        void Update()
         {
             monoBehaviourTree.Tick();
         }
