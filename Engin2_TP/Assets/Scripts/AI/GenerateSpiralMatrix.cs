@@ -13,17 +13,17 @@ public class GenerateSpiralMatrix : MonoBehaviour
         int[,] map = new int[mapWidth, mapHeight];
 
         // Example usage:
-        List<Vector2Int>[] explorerLocations = new List<Vector2Int>[5];
+        List<Vector2Int>[] minerLocations = new List<Vector2Int>[5];
 
         for (int i = 0; i < numberWorkers; i++)
         {
-            explorerLocations[i] = ExploreMap(map, $"Explorer {i + 1}");
+            minerLocations[i] = ExploreMap(map, $"Miner {i + 1}");
         }
 
-       
+       //copie le map, définit isExplored ou non (bool)
     }
 
-    List<Vector2Int> ExploreMap(int[,] map, string explorerName)
+    List<Vector2Int> ExploreMap(int[,] map, string minerName)
     {
         int x = mapWidth / 2;  
         int y = mapHeight / 2; 
@@ -33,12 +33,12 @@ public class GenerateSpiralMatrix : MonoBehaviour
         int steps = 1;
         int stepCount = 0;
 
-        List<Vector2Int> explorerLocations = new List<Vector2Int>();
+        List<Vector2Int> minerLocations = new List<Vector2Int>();
 
         for (int i = 0; i < mapWidth * mapHeight; i++)
         {
 
-            explorerLocations.Add(new Vector2Int(x, y));
+            minerLocations.Add(new Vector2Int(x, y));
 
             if (++stepCount == steps)
             {
@@ -57,6 +57,6 @@ public class GenerateSpiralMatrix : MonoBehaviour
           
         }
 
-        return explorerLocations;
+        return minerLocations;
     }
 }
